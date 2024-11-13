@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sports News</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Body styling */
+    body {
+      background-color: #f4f4f9;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* Container */
+    .container {
+      width: 80%;
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+    }
+
+    /* Heading */
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      color: #444;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 10px;
+    }
+
+    /* News list */
+    ul {
+      list-style-type: none;
+      margin: 20px;
+    }
+
+    /* Each article styling */
+    li {
+      margin-bottom: 20px;
+      padding: 15px;
+      border-radius: 5px;
+      background-color: #f9f9fc;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+    }
+
+    /* Hover effect on articles */
+    li:hover {
+      transform: scale(1.02);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Title styling */
+    h2 {
+      font-size: 1.5rem;
+      color: #0056b3;
+      margin-bottom: 10px;
+    }
+
+    /* Paragraph styling */
+    p {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <h1>Latest Sports News</h1>
+  <ul>
+    <% articles.forEach(article => { %>
+      <li>
+        <h2><%= article.title %></h2>
+        <p><%= article.p %></p>
+      </li>
+    <% }); %>
+  </ul>
+</body>
+</html>
